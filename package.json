@@ -2,7 +2,11 @@
   "name": "express",
   "version": "1.0.0",
   "description": "Node express project",
-  "main": "index.js",
+  "main": "src/index.js",
+  "scripts": {
+    "server": "node src/index.js",
+    "dev": "node-dev --respawn src/index.js"
+  },
   "author": "Jackson Belizário <jacksonluizzb@gmail.com>",
   "license": "MIT",
   "dependencies": {
