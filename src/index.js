@@ -1,6 +1,8 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 
+const UserRoutes = require('./routes/UserRoutes')
+
 const app = express()
 const PORT = 3000
 
@@ -8,6 +10,7 @@ const PORT = 3000
 app.use(bodyParser.json());
 
 // Routes
+app.use('/user', UserRoutes)
 app.get('/', (req, res) => res.json({ response: 'SUCCESS' }))
 
 function start() {
